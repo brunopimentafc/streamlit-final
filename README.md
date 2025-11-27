@@ -106,9 +106,3 @@ Este projeto foi desenvolvido para a conclusão do módulo de Machine Learning a
 👤 Bruno Pimenta
 🌐 GitHub: https://github.com/brunopimentafc
 
-
-6. Desça a página, coloque uma mensagem de commit (ex.: `ajusta README`) e clique em **Commit changes**.
-
-7. Volte na página principal do repositório: agora o README deve aparecer bonitinho, com título grande, tabelas e blocos de código.
-
----
