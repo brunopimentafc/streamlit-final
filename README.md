@@ -20,89 +20,109 @@ A solução **prediz a probabilidade de inadimplência** de clientes solicitante
 
 ## 📁 Estrutura do Repositório
 
-```text
+```
 streamlit-final/
 ├── model/
-│   └── model_final.pkl      # Modelo final treinado (pipeline + regressão logística)
+│   └── model_final.pkl                 # Modelo final treinado (pipeline + regressão logística)
 ├── data/
-│   └── credit_scoring_template.csv  # Template para upload no Streamlit
+│   └── credit_scoring_template.csv     # Template para upload no Streamlit
 ├── streamlit_app/
-│   └── app.py               # Aplicação principal Streamlit
-├── score_functions.py       # Funções auxiliares (load, preprocess, score)
-├── notebooks/               # Notebooks utilizados no desenvolvimento
-└── README.md                # Documentação do projeto
+│   └── app.py                          # Aplicação principal Streamlit
+├── score_functions.py                  # Funções auxiliares (load, preprocess, score)
+├── notebooks/                          # Notebooks utilizados no desenvolvimento
+└── README.md                           # Documentação do projeto
+```
 
-⚠️ Nota importante:
-A base completa (credit_scoring.ftr) não está neste repositório, pois o arquivo é grande e não é necessário para rodar o app.
+⚠️ **Nota importante**  
+A base completa (`credit_scoring.ftr`) **não está neste repositório**, pois o arquivo é grande e **não é necessária para rodar o app**.
 
-🧠 Modelo de Machine Learning
+---
 
-O modelo utiliza:
+## 🧠 Modelo de Machine Learning
 
-Pipeline com:
+O modelo utiliza um **Pipeline** com:
 
-Tratamento de zeros estruturais
+- Tratamento de **zeros estruturais**
+- **Imputação** de valores faltantes
+- **One-Hot Encoding** para variáveis categóricas
+- **Normalização numérica**
+- **Logistic Regression**
 
-Imputação de valores faltantes
+📌 **Treinado sobre uma base de crédito com 15 safras** e desempenho observado em **12 meses**.
 
-One-Hot Encoding para variáveis categóricas
+---
 
-Normalização numérica
+### 🎯 Target
 
-Logistic Regression
+- `mau` — indica se o cliente foi ou não inadimplente.
 
-Treinado sobre uma base de crédito com 15 safras e desempenho observado em 12 meses.
+---
 
-🎯 Target
+## 📊 Métricas Avaliadas
 
-mau — indica se o cliente foi ou não inadimplente.
+| Métrica      | Base Treino | Base OOT |
+|--------------|-------------|----------|
+| **AUC ROC**  | ~0.76       | ~0.72    |
+| **KS**       | Avaliado    | Avaliado |
+| **Gini**     | Avaliado    | Avaliado |
 
-📊 Métricas Avaliadas
-Métrica	Base Treino	Base OOT
-AUC ROC	~0.76	~0.72
-KS	Avaliado	Avaliado
-Gini	Avaliado	Avaliado
-🎬 Demonstração em Vídeo
+---
 
-📹 Clique para assistir ao funcionamento do aplicativo:
-(adicione o link do vídeo aqui depois de subir para o Drive/YouTube)
+## 🎬 Demonstração em Vídeo
 
-🎥 Exemplo a adicionar:
+📹 **Clique para assistir ao funcionamento do aplicativo:**  
+👉 *(adicione o link do vídeo aqui depois de subir para o repositório ou Drive/YouTube)*
+
+```
 https://drive.google.com/SEU_LINK_AQUI
+```
 
-▶️ Como Executar o Projeto Localmente
-1️⃣ Instale as dependências
+---
+
+## ▶️ Como Executar o Projeto Localmente
+
+### 1️⃣ Instale as dependências
+
+```bash
 pip install -r requirements.txt
+```
 
-2️⃣ Execute o Streamlit
+### 2️⃣ Execute o Streamlit
+
+```bash
 streamlit run streamlit_app/app.py
+```
 
-3️⃣ Faça Upload do CSV e veja o score!
+### 3️⃣ Faça Upload do CSV e visualize o score!
 
-Use o arquivo de template disponível em:
+Utilize o template disponível em:
 
+```
 data/credit_scoring_template.csv
+```
 
-📌 Uso do App
+---
 
-Faça upload de um arquivo CSV seguindo o template fornecido.
+## 📌 Uso do App
 
-O sistema processa e aplica o modelo automaticamente.
+- Faça upload de um arquivo CSV seguindo o template fornecido;
+- O sistema processa e aplica o modelo automaticamente;
+- O resultado exibe:
+  - ✔ Probabilidade de inadimplência  
+  - ✔ Classificação prevista  
+  - ✔ Opção de download dos resultados  
 
-O resultado exibe:
+---
 
-✔ probabilidade de inadimplência
+## 👨‍🏫 Projeto Acadêmico
 
-✔ classificação prevista
+Este projeto foi desenvolvido para a conclusão do módulo de **Machine Learning aplicado a Crédito**, no curso da **EBAC – Escola Britânica de Artes Criativas e Tecnologia**.
 
-✔ opção de download dos resultados
+---
 
-👨‍🏫 Projeto Acadêmico
+## 🙋‍♂️ Autor
 
-Este projeto foi desenvolvido para a conclusão do módulo de Machine Learning aplicado a crédito, no curso da EBAC – Escola Britânica de Artes Criativas e Tecnologia.
-
-🙋‍♂️ Autor
-
-👤 Bruno Pimenta
+👤 **Bruno Pimenta**  
 🌐 GitHub: https://github.com/brunopimentafc
+
 
