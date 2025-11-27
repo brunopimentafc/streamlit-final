@@ -70,11 +70,11 @@ O modelo utiliza um **Pipeline** com:
 
 ## 🎬 Demonstração em Vídeo
 
-📹 **Clique para assistir ao funcionamento do aplicativo:**  
-👉 *(adicione o link do vídeo aqui depois de subir para o repositório ou Drive/YouTube)*
+📹 **Clique para assistir ao funcionamento do aplicativo:**
+https://github.com/brunopimentafc/streamlit-final/blob/main/media/demo_streamlit_credit_scoring.mp4
 
 ```
-https://drive.google.com/SEU_LINK_AQUI
+
 ```
 
 ---
@@ -124,5 +124,6 @@ Este projeto foi desenvolvido para a conclusão do módulo de **Machine Learning
 
 👤 **Bruno Pimenta**  
 🌐 GitHub: https://github.com/brunopimentafc
+
 
 
